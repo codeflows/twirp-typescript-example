@@ -1,0 +1,19 @@
+{
+  "name": "twirp-typescript-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/request-promise": "^4.1.41",
+    "protobufjs": "^6.8.4",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "generate": "pbjs -t static-module -w commonjs -o generated/haberdasher.js ../server/haberdasher/haberdasher.proto && pbts -o generated/haberdasher.d.ts generated/haberdasher.js",
+    "start": "tsc && node out/main.js"
+  }
+}
