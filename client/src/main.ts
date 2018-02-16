@@ -3,7 +3,7 @@ import {makeRpcClient} from './rpc'
 
 const {Haberdasher, Size} = twirp.example.haberdasher
 
-const rpc = makeRpcClient('http://localhost:8080', 'twirp.example.haberdasher.Haberdasher', 'MakeHat')
+const rpc = makeRpcClient('http://localhost:8080', 'twirp.example.haberdasher.Haberdasher')
 const haberdasher = Haberdasher.create(rpc)
 
 const sizeOne = Size.create({inches: 1})
